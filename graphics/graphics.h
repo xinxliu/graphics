@@ -1,4 +1,4 @@
-#ifndef _GRAPHICD_H_
+ï»¿#ifndef _GRAPHICD_H_
 #define _GRAPHICS_H_
 
 #include "FigureManager.h"
@@ -29,7 +29,7 @@ void Triangle::figureShow()
 {
 	if (FigureManager::checkLanguageFlags() == 0)
 	{
-		cout << "Èý½ÇÐÎ(" << x1 << "," << y1 << ","
+		cout << "ä¸‰è§’å½¢(" << x1 << "," << y1 << ","
 			<< x2 << "," << y2 << "," << x3 << "," << y3 << ")" << endl;
 	}
 	else if (FigureManager::checkLanguageFlags() == 1)
@@ -43,7 +43,7 @@ void Triangle::figureInput()
 {
 	if (FigureManager::checkLanguageFlags() == 0)
 	{
-		cout << "ÇëÊäÈëÈý½ÇÐÎµÄÈý¸ö×ø±ê(x1,y1,x2,y2,x3,y3)" << endl;
+		cout << "è¯·è¾“å…¥ä¸‰è§’å½¢çš„ä¸‰ä¸ªåæ ‡(x1,y1,x2,y2,x3,y3)" << endl;
 	}
 	else if (FigureManager::checkLanguageFlags() == 1)
 	{
@@ -71,7 +71,7 @@ public:
 		}
 		else if (flags == CHINESE)
 		{
-			return "Èý½ÇÐÎ";
+			return "ä¸‰è§’å½¢";
 		}
 	}
 };

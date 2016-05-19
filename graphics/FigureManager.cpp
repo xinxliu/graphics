@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "FigureManager.h"
 
 #include <iostream>
@@ -7,7 +7,9 @@ using std::cin;
 using std::endl;
 vector<Factory*> g_Factories;
 
-
+//ä¸­æ–‡æ”¯æŒæµ‹è¯•
+//ä¸­æ–‡æ”¯æŒæµ‹è¯•
+//ä¸­æ–‡æ”¯æŒæµ‹è¯•
 int FigureManager::_languageFlags = 0;
 
 void FigureManager::languageSet(int Flags)
@@ -68,7 +70,7 @@ void FigureManager::display(int orderFlags, int typeFlags)
 	{
 		if (_languageFlags == 0)
 		{
-			cout << "ÉĞÎ´ÊÕÂ¼ÈÎºÎÍ¼ĞÎ£¡" << endl;
+			cout << "å°šæœªæ”¶å½•ä»»ä½•å›¾å½¢ï¼" << endl;
 		}
 		else if (_languageFlags == 1)
 		{
@@ -82,7 +84,7 @@ void FigureManager::display(int orderFlags, int typeFlags)
 		{
 			if (_languageFlags == 0)
 			{
-				cout << "¹²ÓĞ" << _count << "¸öÍ¼ĞÎ" << endl;
+				cout << "å…±æœ‰" << _count << "ä¸ªå›¾å½¢" << endl;
 			}
 			else if (_languageFlags == 1)
 			{
@@ -99,8 +101,8 @@ void FigureManager::display(int orderFlags, int typeFlags)
 		{
 			if (_languageFlags == 0)
 			{
-				cout <<endl<< "¹²ÓĞ" << _count << "¸öÍ¼ĞÎ";
-				cout << endl << "°´ÕÕÃû³ÆÅÅĞò: " << endl;
+				cout <<endl<< "å…±æœ‰" << _count << "ä¸ªå›¾å½¢";
+				cout << endl << "æŒ‰ç…§åç§°æ’åº: " << endl;
 							}
 			else if (_languageFlags == 1)
 			{
@@ -128,7 +130,7 @@ void FigureManager::display(int orderFlags, int typeFlags)
 	{
 		if (checkLanguageFlags() == 0)
 		{
-			cout << endl << "Ä£Ê½£ºÊä³öµ±Ç°Öµ" << endl;
+			cout << endl << "æ¨¡å¼ï¼šè¾“å‡ºå½“å‰å€¼" << endl;
 		}
 		else if (checkLanguageFlags() == 1)
 		{
@@ -157,12 +159,12 @@ void FigureManager::output(int flags)
 		if (_languageFlags == 0)
 		{
 
-			cout << endl << "ÇëÊäÈëÍ¼ĞÎµÄÖÖÀà£º" << endl;
+			cout << endl << "è¯·è¾“å…¥å›¾å½¢çš„ç§ç±»ï¼š" << endl;
 			for (int i = 0; i < Factory::_FacCount; i++)
 			{
 				cout << i << ": " << g_Factories[i]->figureName(0) << endl;
 			}
-			cout << "-1: ½áÊø" << endl;
+			cout << "-1: ç»“æŸ" << endl;
 		}
 		else if (_languageFlags = 1)
 		{
@@ -178,7 +180,7 @@ void FigureManager::output(int flags)
 	{
 		if (_languageFlags == 0)
 		{
-			cout << endl << "ÇëÊäÈëÓĞĞ§µÄÊı×Ö£¡" << endl << endl;
+			cout << endl << "è¯·è¾“å…¥æœ‰æ•ˆçš„æ•°å­—ï¼" << endl << endl;
 		}
 		else if (_languageFlags == 1)
 		{
@@ -189,8 +191,8 @@ void FigureManager::output(int flags)
 	{
 		if (_languageFlags == 0)
 		{
-			cout << endl << "ÍË³öÊäÈë×´Ì¬ÖĞ..." << endl;
-			cout << "ÍË³ö³É¹¦£¡" << endl << endl;
+			cout << endl << "é€€å‡ºè¾“å…¥çŠ¶æ€ä¸­..." << endl;
+			cout << "é€€å‡ºæˆåŠŸï¼" << endl << endl;
 		}
 		else if (_languageFlags == 1)
 		{
@@ -202,8 +204,8 @@ void FigureManager::output(int flags)
 	{
 		if (_languageFlags == 0)
 		{
-			cout << endl << "Êı¾İ±£´æÖĞ..." << endl;
-			cout << "Êı¾İ±£´æ³É¹¦£¡" << endl << endl;
+			cout << endl << "æ•°æ®ä¿å­˜ä¸­..." << endl;
+			cout << "æ•°æ®ä¿å­˜æˆåŠŸï¼" << endl << endl;
 		}
 		if (_languageFlags == 1)
 		{
@@ -217,7 +219,7 @@ void Line::figureShow()
 {
 	if (FigureManager::checkLanguageFlags() == 0)
 	{
-		cout << "Ïß¶Î(" << x1 << "," << y1 << ","
+		cout << "çº¿æ®µ(" << x1 << "," << y1 << ","
 			<< x2 << "," << y2 << ")" << endl;
 	}
 	else if (FigureManager::checkLanguageFlags() == 1)
@@ -231,7 +233,7 @@ void Line::figureInput()
 {
 	if (FigureManager::checkLanguageFlags() == 0)
 	{
-		cout << "ÇëÊäÈëÏß¶ÎµÄÆğµãºÍÖÕµã×ø±ê(x1,y1,x2,y2)" << endl;
+		cout << "è¯·è¾“å…¥çº¿æ®µçš„èµ·ç‚¹å’Œç»ˆç‚¹åæ ‡(x1,y1,x2,y2)" << endl;
 	}
 	else if (FigureManager::checkLanguageFlags() == 1)
 	{
@@ -250,7 +252,7 @@ void Rectangle::figureShow()
 {
 	if (FigureManager::checkLanguageFlags() == 0)
 	{
-		cout << "¾ØĞÎ(" << left << "," << top << ","
+		cout << "çŸ©å½¢(" << left << "," << top << ","
 			<< right << "," << bottom << ")" << endl;
 	}
 	else if (FigureManager::checkLanguageFlags() == 1)
@@ -264,7 +266,7 @@ void Rectangle::figureInput()
 {
 	if (FigureManager::checkLanguageFlags() == 0)
 	{
-		cout << "ÇëÊäÈë¾ØĞÎµÄ×óÉÏ½ÇºÍÓÒÏÂ½Ç×ø±ê(x1,y1,x2,y2)" << endl;
+		cout << "è¯·è¾“å…¥çŸ©å½¢çš„å·¦ä¸Šè§’å’Œå³ä¸‹è§’åæ ‡(x1,y1,x2,y2)" << endl;
 	}
 	else if (FigureManager::checkLanguageFlags() == 1)
 	{
@@ -277,7 +279,7 @@ void Circle::figureShow()
 {
 	if (FigureManager::checkLanguageFlags() == 0)
 	{
-		cout << "Ô²(" << x << "," << y << ","
+		cout << "åœ†(" << x << "," << y << ","
 			<< radius << ")" << endl;
 	}
 	else if (FigureManager::checkLanguageFlags() == 1)
@@ -291,7 +293,7 @@ void Circle::figureInput()
 {
 	if (FigureManager::checkLanguageFlags() == 0)
 	{
-		cout << "ÇëÊäÈëÔ²µÄÔ²ĞÄ×ø±êºÍ°ë¾¶(x£¬y£¬radius)" << endl;
+		cout << "è¯·è¾“å…¥åœ†çš„åœ†å¿ƒåæ ‡å’ŒåŠå¾„(xï¼Œyï¼Œradius)" << endl;
 	}
 	else if (FigureManager::checkLanguageFlags() == 1)
 	{

@@ -1,4 +1,4 @@
-#ifndef _FIGUREMANAGER_H_
+ï»¿#ifndef _FIGUREMANAGER_H_
 #define _FIGUREMANAGER_H_
 #include <string>
 #include <vector>
@@ -162,7 +162,7 @@ public:
 	{
 		if (flags == CHINESE)
 		{
-			return "Ïß¶Î";
+			return "çº¿æ®µ";
 		}
 		else if (flags == ENGLISH)
 		{
@@ -187,7 +187,7 @@ public:
 	{
 		if (flags == CHINESE)
 		{
-			return "¾ØÐÎ";
+			return "çŸ©å½¢";
 		}
 		else if (flags == ENGLISH)
 		{
@@ -216,7 +216,7 @@ public:
 		}
 		else if (flags == CHINESE)
 		{
-			return "Ô²";
+			return "åœ†";
 		}
 	}
 };
